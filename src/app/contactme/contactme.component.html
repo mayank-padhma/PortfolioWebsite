@@ -1,0 +1,59 @@
+<div class="px-5" id="contactme">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md">
+                <img src="http://www.nurturingparentsandteachers.com/wp-content/uploads/2011/11/contact-me.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md p-5">
+                <h4 class="mb-3">Please write your message here!</h4>
+                <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
+                    <div class="d-flex">
+                        <div class="mb-3 me-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" formControlName="firstname" >    
+                            <span style="color: red;" *ngIf="fname && fname.invalid && fname.touched">This field is required.</span>
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                              <input type="text" class="form-control" id="lastName" formControlName="lastname">
+                              <span style="color: red;" *ngIf="lname && lname.invalid && lname.touched">This field is required.</span>
+                            </div>
+                        </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+                      <span style="color: red;" *ngIf="Email && Email.invalid && Email.touched">Please enter email.</span>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Message</label>
+                      <textarea class="form-control" id="messageArea" rows="3" formControlName="mess"></textarea>
+                      <span style="color: red;" *ngIf="Mess && Mess.invalid && Mess.touched">This field is required.</span>
+                    </div>
+                    <button [disabled]="feedbackForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  <div class="d-flex">
+                      <div class="mt-3 me-3">
+                          <a href="https://www.linkedin.com/in/mayank-padhma/" target="_blank">
+                              <img style="width: 0.8cm;" src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="">
+                          </a>
+                      </div>
+                      <div class="mt-3 me-3">
+                          <a href="https://github.com/mayank-padhma" target="_blank">
+                              <img style="width: 0.8cm;" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+                          </a>
+                      </div>
+                      <div class="mt-3 me-3">
+                          <a href="mailto:mayankpadhma23@gmail.com" target="_blank">
+                              <img style="width: 0.8cm;" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/80-google-plus-512.png" alt="">
+                          </a>
+                      </div>
+                      <div class="mt-3 me-3">
+                          <a href="https://twitter.com/mayank_padhma" target="_blank">
+                              <img style="width: 0.8cm;" src="https://pnggrid.com/wp-content/uploads/2021/04/twiter-2-1024x845.png" alt="">
+                          </a>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

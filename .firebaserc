@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfolio-ccc2b": {
+      "hosting": {
+        "Portfolio": [
+          "portfolio-ccc2b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfolio-ccc2b"
+  }
+}
